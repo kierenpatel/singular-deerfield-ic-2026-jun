@@ -318,55 +318,94 @@
 <!-- ============================================================
      SLIDE 3 — JOHN STARK
 ============================================================ -->
-<section class="slide white" id="s03">
-  <div class="brand"><img src="assets/logo-singular-black.png" alt=""><span class="name">Singular Genomics</span></div>
-  <div class="page">03 / 23</div>
+<style>
+  /* slide 3 — v4.2 scoped design */
+  #s03{
+    background:
+      radial-gradient(ellipse 40% 50% at 90% 5%, rgba(46,102,94,0.10) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 60% at 5% 100%, rgba(178,96,42,0.10) 0%, transparent 55%),
+      linear-gradient(180deg, #FBFAF6 0%, #F4F0E5 100%) !important;
+    padding:54px 72px 30px !important;
+  }
+  #s03 .stage{position:static;padding:0;inset:auto;display:flex;flex-direction:column}
+  #s03 .s3-eyebrow{font-size:10.5px;font-weight:700;letter-spacing:0.24em;text-transform:uppercase;color:#2E665E}
+  #s03 .s3-page{position:absolute;top:54px;right:72px;font-family:'SF Mono',ui-monospace,Menlo,monospace;font-size:10px;font-weight:700;letter-spacing:0.14em;color:#8A8278}
+  #s03 .s3-title{font-family:'Charter','Iowan Old Style',Georgia,serif;font-size:38px;font-weight:400;letter-spacing:-0.012em;line-height:1.14;color:#1A1815;max-width:1140px;margin-top:6px;text-wrap:balance}
+  #s03 .s3-title em{font-style:italic;color:#B2602A;font-weight:500}
+  #s03 .s3-main{display:flex;flex-direction:column;gap:18px;margin-top:18px;flex:1;min-height:0}
+  #s03 .s3-id{display:grid;grid-template-columns:140px 1fr;gap:24px;align-items:center}
+  #s03 .s3-portrait{width:140px;height:140px;overflow:hidden;border-radius:50%;background:#000;box-shadow:0 1px 2px rgba(0,0,0,0.06),0 6px 18px rgba(0,0,0,0.10);border:2px solid #fff}
+  #s03 .s3-portrait img{width:100%;height:100%;object-fit:cover;object-position:center 28%}
+  #s03 .s3-who{display:flex;flex-direction:column;gap:4px}
+  #s03 .s3-name{font-family:'Charter',Georgia,serif;font-size:32px;font-weight:500;color:#1A1815;letter-spacing:-0.012em;line-height:1.0}
+  #s03 .s3-role{font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#2E665E;font-weight:700}
+  #s03 .s3-tagline{font-family:'Charter',Georgia,serif;font-style:italic;font-size:15px;color:#615B53;line-height:1.5;max-width:600px;margin-top:6px}
+  #s03 .s3-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding:18px 0;border-top:1px solid #EAE5D6;border-bottom:1px solid #EAE5D6}
+  #s03 .s3-pillar{display:flex;flex-direction:column;gap:6px}
+  #s03 .s3-pn{font-family:'Charter',Georgia,serif;font-size:38px;line-height:0.9;color:#B2602A;font-weight:400;letter-spacing:-0.02em}
+  #s03 .s3-pillar h3{font-size:16px;font-weight:700;color:#1A1815;letter-spacing:-0.005em;line-height:1.25}
+  #s03 .s3-pillar p{font-size:13px;color:#615B53;line-height:1.55;text-wrap:pretty}
+  #s03 .s3-career{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:12px}
+  #s03 .s3-ch{display:flex;align-items:baseline;justify-content:space-between;gap:18px}
+  #s03 .s3-ch .lbl{font-size:10.5px;font-weight:700;letter-spacing:0.24em;text-transform:uppercase;color:#2E665E}
+  #s03 .s3-ch .span{font-family:'Charter',Georgia,serif;font-style:italic;font-size:13px;color:#615B53}
+  #s03 .s3-row{display:grid;grid-template-columns:repeat(6,1fr);gap:0;align-items:center;padding:8px 0;position:relative}
+  #s03 .s3-row::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:#D8D2C2;z-index:0}
+  #s03 .s3-cell{display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#FBFAF6 0%,#F4F0E5 100%);padding:4px 14px;position:relative;z-index:1;min-height:48px}
+  #s03 .s3-cell img{max-height:36px;max-width:140px;object-fit:contain;filter:grayscale(0.20)}
+  #s03 .s3-cell img.tall{max-height:42px}
+  #s03 .s3-cell img.short{max-height:28px}
+  #s03 .s3-footer{position:absolute;bottom:18px;left:72px;right:72px;display:flex;justify-content:space-between;align-items:center;font-size:9.5px;letter-spacing:0.18em;text-transform:uppercase;color:#8A8278;font-weight:600}
+  #s03 .s3-footer .brand-mark{display:flex;align-items:center;gap:8px}
+  #s03 .s3-footer .brand-mark img{height:16px;width:auto;opacity:0.70}
+  #s03 .s3-footer .brand-mark .wd{font-size:9.5px;letter-spacing:0.30em;color:#615B53;font-weight:700}
+  #s03 .s3-footer .brand-mark .wd small{display:inline-block;font-weight:500;color:#8A8278;font-size:8px;letter-spacing:0.22em;margin-left:6px}
+</style>
+<section class="slide" id="s03">
+  <div class="s3-eyebrow">01 · Who is running the company</div>
+  <div class="s3-page">03 / 23</div>
 
-  <div class="stage" style="padding-top:8px">
-    <div style="margin-bottom:14px">
-      <div class="section-eyebrow">01 · Who is running the company</div>
+  <h2 class="s3-title">An operator with one pattern — <em>turn diagnostic technology into outcomes that move patient&nbsp;care.</em></h2>
+
+  <div class="s3-main">
+    <div class="s3-id">
+      <div class="s3-portrait"><img src="assets/john-with-kids-portrait.jpg" alt="John Stark with family"></div>
+      <div class="s3-who">
+        <div class="s3-name">John Stark</div>
+        <div class="s3-role">Chief Executive Officer · Singular Genomics</div>
+        <div class="s3-tagline">Two decades commercializing diagnostic platforms — at Affymetrix, Thermo, and four spatial-biology pioneers that came after.</div>
+      </div>
     </div>
 
-    <div style="display:grid;grid-template-columns:380px 1fr;gap:48px;flex:1">
-      <!-- Portrait + name -->
-      <div class="col" style="gap:18px">
-        <div class="frame" style="aspect-ratio:1/1;background:#222"><img class="photo" src="assets/john-headshot.jpg" alt="John Stark"></div>
-        <div>
-          <div style="font-family:var(--serif);font-size:34px;color:var(--ink);font-weight:400;letter-spacing:-0.01em">John Stark</div>
-          <div class="micro" style="margin-top:6px;color:var(--accent)">Chief Executive Officer · Singular Genomics</div>
-        </div>
-        <div>
-          <div class="section-eyebrow" style="margin-bottom:10px">Career anchors</div>
-          <div style="display:flex;align-items:center;gap:22px;flex-wrap:wrap">
-            <img src="assets/logo-affymetrix.png" class="career-logo" alt="Affymetrix" style="height:32px">
-            <span style="font-family:var(--serif);font-style:italic;color:var(--ink-3);font-size:14px">Thermo Fisher · BD · ELITech</span>
-          </div>
-          <div class="small" style="margin-top:10px;font-style:italic">Diagnostics · IVD · CDx · pharma BD · M&amp;A</div>
-        </div>
+    <div class="s3-pillars">
+      <div class="s3-pillar"><div class="s3-pn">01</div><h3>Drug-development centric.</h3><p>Every technology gets deployed where it moves a drug forward — companion diagnostics, patient stratification, response monitoring. Pharma is how value is captured.</p></div>
+      <div class="s3-pillar"><div class="s3-pn">02</div><h3>Patient impact first.</h3><p>Resources flow to technology that changes what happens at the bedside. Tools without a line to a patient are deprioritized.</p></div>
+      <div class="s3-pillar"><div class="s3-pn">03</div><h3>Engineering &amp; computational mindset.</h3><p>Efficiency, quantitative detection, scale. Run the math first, design the experiment second, build the org around the bottleneck.</p></div>
+    </div>
+
+    <div class="s3-career">
+      <div class="s3-ch">
+        <div class="lbl">Career trajectory · two decades in molecular diagnostics</div>
+        <div class="span">Sequencing → spatial biology → AI-native diagnostics</div>
       </div>
-
-      <!-- Right: title + 3 anchors -->
-      <div class="col" style="gap:24px;padding-top:8px">
-        <div class="title" style="font-size:42px">An operator with one pattern — <em>turn diagnostic technology into outcomes that move patient&nbsp;care.</em></div>
-
-        <div class="col" style="gap:18px;margin-top:8px">
-          <div class="row" style="align-items:flex-start;gap:18px;padding-bottom:18px;border-bottom:1px solid var(--line-2)">
-            <div class="step-num" style="font-size:36px;min-width:56px">01</div>
-            <div><div style="font-family:var(--serif);font-size:19px;color:var(--ink);font-weight:500;margin-bottom:4px">Drug-development centric.</div><p>Every technology gets deployed where it moves the drug forward — companion diagnostics, patient stratification, response. Pharma is how value is captured.</p></div>
-          </div>
-          <div class="row" style="align-items:flex-start;gap:18px;padding-bottom:18px;border-bottom:1px solid var(--line-2)">
-            <div class="step-num" style="font-size:36px;min-width:56px">02</div>
-            <div><div style="font-family:var(--serif);font-size:19px;color:var(--ink);font-weight:500;margin-bottom:4px">Patient impact first.</div><p>Resources flow to technology that changes what happens at the bedside. Tools without a line to a patient are deprioritized.</p></div>
-          </div>
-          <div class="row" style="align-items:flex-start;gap:18px">
-            <div class="step-num" style="font-size:36px;min-width:56px">03</div>
-            <div><div style="font-family:var(--serif);font-size:19px;color:var(--ink);font-weight:500;margin-bottom:4px">Engineering &amp; computational mindset.</div><p>Efficiency, quantitative detection, scale. Run the math first, design the experiment second, build the org around the bottleneck the math surfaced.</p></div>
-          </div>
-        </div>
+      <div class="s3-row">
+        <div class="s3-cell"><img src="assets/logo-affymetrix.png" class="tall" alt="Affymetrix"></div>
+        <div class="s3-cell"><img src="assets/logo-thermo.png" alt="Thermo Scientific"></div>
+        <div class="s3-cell"><img src="assets/logo-iontorrent.png" alt="Ion Torrent"></div>
+        <div class="s3-cell"><img src="assets/logo-celsee.jpeg" alt="Celsee (Bio-Rad)"></div>
+        <div class="s3-cell"><img src="assets/logo-pacbio.svg" class="short" alt="Pacific Biosciences"></div>
+        <div class="s3-cell"><img src="assets/logo-quantumsi.png" alt="QuantumSi"></div>
       </div>
     </div>
   </div>
-  <div class="footer"><span>Singular Genomics · Deerfield IC · June 2026</span><span>John Stark</span></div>
+
+  <div class="s3-footer">
+    <div>Singular Genomics · Deerfield IC · June 2026</div>
+    <div class="brand-mark">
+      <img src="assets/logo-singular-black.png" alt="">
+      <span class="wd">SINGULAR<small>GENOMICS</small></span>
+    </div>
+  </div>
 </section>
 
 <!-- ============================================================
